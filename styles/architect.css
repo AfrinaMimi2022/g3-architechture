@@ -12,6 +12,11 @@ body{
     cursor: pointer;
 }
 
+.gray-text{
+    color: #727272;
+    line-height: 26px; 
+}
+
 /* header styles */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -57,11 +62,6 @@ nav li a{
     font-weight: 700;
 }
 
-.banner-description{
-    color: #727272;
-    line-height: 26px; 
-}
-
 .banner img{
     margin-top: 30px;
     width: 100%;
@@ -76,11 +76,15 @@ main{
 .teams-container{
     display: flex;
     align-items: center;
+    margin: 5%;
+    padding-left: 100px;
 }
+
 .teams-img-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:1.5rem;
+    border-radius: 8px;
 }
 .teams-content{
     padding: 0 70px;
@@ -89,7 +93,7 @@ main{
     font-size: 2.8rem;
 }
 .teams-title .quick-list{
-    color: #727272;
+    /* color: #727272; */
     font-weight: 500;
 }
 .teams-title .ours{
@@ -102,12 +106,6 @@ font-weight: 700;
     font-weight: 700;
 }
 
-.teams-description{
-    color: #727272;
-font-size: 16px;
-line-height: 26px; 
-
-}
 
 
 
@@ -122,16 +120,23 @@ line-height: 26px;
         padding: 1%;
         margin: 0;
     }
-    .banner-content{
+    .banner-content, .teams-content{
         width: 50%;
+        text-align: center;
     }
 
-    nav{
+    .teams-content{
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    nav, .teams-container{
         flex-direction: column;
     }
-    .banner-description{
+    /* .banner-description{
         font-size: .8rem;
-    }
+    } */
     .banner-title{
         color:  #602967;
         font-size: 2.5rem;
@@ -142,6 +147,14 @@ line-height: 26px;
     .banner, header{
         width: 100%;
 
+    }
+    .teams-img-container{
+        grid-template-columns: 1fr;
+    }
+    
+    .teams-container{
+        margin: 3%;
+        padding-left: 0;
     }
     
 }
@@ -156,11 +169,11 @@ line-height: 26px;
     .banner, header{
         width: 100%;
     }
-    .banner-content{
+    .banner-content, .teams-content{
         width: 90%;
     }
     
-    nav{
+    nav, .teams-container{
         flex-direction: column;
     }
     
